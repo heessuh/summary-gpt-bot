@@ -3,7 +3,6 @@
 An AI-powered text summarization Telegram bot that generates concise summaries of text, URLs, PDFs and YouTube videos.
 
 - EN Bot: https://t.me/summarygptenbot
-- 繁中 Bot: https://t.me/summarygptzhtwbot
 
 ## Features
 
@@ -26,6 +25,16 @@ An AI-powered text summarization Telegram bot that generates concise summaries o
 # install libraries
 pip install -r requirements.txt
 
-# start telegram bot
-docker run -d -e OPENAI_API_KEY=$YOUR_API_KEY -e TELEGRAM_TOKEN=$YOUR_TOKEN -e TS_LANG=$YOUR_LANGUAGE tonypai/summary-gpt-bot
+Build the Docker image: In the terminal, navigate to the project directory and run the following command to build the Docker image:
+
+docker build -t telegram-bot .
+
+This command will build the Docker image using the specified Dockerfile and requirements.txt.
+
+Run the Docker container: Once the image is built, run the following command to start a Docker container:
+
+docker run -d telegram-bot
+
+This command will start a container based on the built image, and the Telegram bot will be up and running.
+
 ```
